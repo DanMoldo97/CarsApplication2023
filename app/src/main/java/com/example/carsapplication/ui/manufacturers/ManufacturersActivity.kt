@@ -46,7 +46,7 @@ class ManufacturersActivity : AppCompatActivity() {
             }
 
             override  fun onQueryTextChange(p0: String?): Boolean {
-                myAdapter.filter.filter(p0)
+                myAdapter.filter?.filter(p0)
                 return false
             }
         })
