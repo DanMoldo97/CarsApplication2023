@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/drawable/ic_search_24.xml" value="0.29270833333333335" />
+        <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/layout/activity_details.xml" value="0.2765625" />
+        <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/layout/activity_manufacturers.xml" value="0.2765625" />
+        <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/layout/app_bar_main.xml" value="0.2765625" />
+        <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/layout/content_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/layout/fragment_gallery.xml" value="0.34270833333333334" />
+        <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/layout/my_row_layout.xml" value="0.2765625" />
+        <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/layout/nav_header_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/menu/activity_main_drawer.xml" value="0.2765625" />
+        <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/menu/main.xml" value="0.2765625" />
+        <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/menu/search_manufacturer_menu.xml" value="0.2765625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

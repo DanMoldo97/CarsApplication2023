@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">CarsApplication</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Cars Companion</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_manufacturers">Manufacturers</string>
+
+
+    <string-array name="car_manufacturers">
+        <item>Fiat</item>
+        <item>Alfa Romeo</item>
+        <item>Mini Cooper</item>
+        <item>BMW</item>
+        <item>Mercedes</item>
+    </string-array>
+
+    <string-array name="manufacturer_country">
+        <item>Italy</item>
+        <item>Italy</item>
+        <item>Great Britain</item>
+        <item>Germany</item>
+        <item>Germany</item>
+        <item>Germany</item>
+    </string-array>
+
+    <string name="alfa_romeo_details_desc">Alfa Romeo Automobiles S.p.A. is an Italian automaker founded on June 24, 1910 in Milan, Italy.
+        Alfa Romeo has been a part of the Fiat Group since 1986, and since February 2007 a part of Fiat Group Automobiles S.p.A.
+        The company was owned by Italian state holding company Istituto per la Ricostruzione Industriale between the end of 1932 to 1986.
+        In real life, it is known for having a rich motorsport heritage and manufacturing desirable cars (some of its past lineups are considered classic).
+        It is also famous for its engines, notably its V6 engine which has excellent engine sound.
+    </string>
+
+    <string name="fiat_details_desc">Fiat (Fabbrica Italiana Automobili Torino) was founded in 1899 in Torino, Italy by a group of investors including Giovanni Agnelli.
+        It is currently the largest car manufacturer in Italy, and the 6th largest in the world.
+        Fiat is famous for the production of several models, including the Fiat 500 series, Punto, Panda and Stilo.
+        The manufacturer is also famous for owning other Italian automakers such as Alfa Romeo, Lancia, Ferrari (spun off in 2016), and its sister company, Maserati.
+    </string>
+
+    <string name="mercedes_details_desc">
+        Mercedes-Benz, colloquially referred to as Mercy, is a German automaker based in Stuttgart, Germany.
+        The automaker manufactures luxury automobiles, buses, coaches and trucks.
+        It is currently a division of the parent company, Daimler AG (formerly DaimlerChrysler AG), after previously being owned by Daimler-Benz.
+    </string>
+
+    <string name="bmw_details_desc">
+        Bayerische Motoren Werke AG (better known as Bavarian Motor Works in English or BMW for short) is a German automobile and motorcycle producing company that was founded in the year 1916.
+        BMW owns the Mini brand, as well as producing the cars for the brand. It is also the parent company of Rolls-Royce Motor Cars.
+        BMW is well known for its performance and luxury vehicles such as the M3 coupe/sedan, M5 performance sedan, and M6 grand touring luxury sport coupe/convertible.
+    </string>
+
+    <string name="mini_cooper_details_desc">
+        The Mini was originally produced by the British Motor Corporation (BMC). In 1969, Mini production was taken over by the British Leyland Motor Corporation after BMC merged with Leyland Motors, and in 1988 British Leyland became the Rover Group.
+        Times changed soon after; BMW bought out Rover in 1994, and six years later Rover bar Mini was sold off.
+        Minis continue to be produced in the UK to this day, especially after a new-look model debuted in 2001, though its headquarters has been moved to Germany where it becomes one with BMW.
+    </string>
+
+    <string name="audi_details_desc">
+        Audi is an automobile manufacturer based in Ingolstadt, Germany and founded in 1909. Before being acquired by Volkswagen AG, Audi was part of Auto Union.
+        Currently the company is praised for their premium luxury saloons and sports cars.
+    </string>
+</resources>
