@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.ContentValues
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.provider.MediaStore
@@ -17,6 +18,7 @@ import androidx.core.content.ContextCompat
 import java.util.concurrent.Executors
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
+import com.example.carsapplication.ui.ViewShareImage
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.ExecutorService
@@ -69,6 +71,7 @@ class CarCapture : AppCompatActivity() {
 
         // Set up image capture listener, which is triggered after photo has
         // been taken
+        var intent  =  Intent(this, ViewShareImage::class.java)
         imageCapture.takePicture(
             outputOptions,
             ContextCompat.getMainExecutor(this),
@@ -79,9 +82,11 @@ class CarCapture : AppCompatActivity() {
 
                 override fun onImageSaved(output: ImageCapture.OutputFileResults){
                     val msg = "Photo capture succeeded: ${output.savedUri}"
-                    output.savedUri
                     Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
                     Log.d(TAG, msg)
+                    intent.setData(output.savedUri)
+                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    startActivity(intent)
                 }
             }
         )
@@ -142,7 +147,7 @@ class CarCapture : AppCompatActivity() {
         private const val FILENAME_FORMAT = "yyyy-MM-dd-HH-mm-ss-SSS"
         private const val REQUEST_CODE_PERMISSIONS = 10
         private val REQUIRED_PERMISSIONS =
-            mutableListOf (Manifest.permission.CAMERA)
+            mutableListOf (Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE)
                 .apply {
                     if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
                         add(Manifest.permission.WRITE_EXTERNAL_STORAGE)
