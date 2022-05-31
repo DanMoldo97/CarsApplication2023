@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/drawable/ic_search_24.xml" value="0.29270833333333335" />
+        <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/layout/activity_car_capture.xml" value="0.1" />
         <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/layout/activity_details.xml" value="0.2765625" />
         <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Daniel.Moldoveanu/AndroidStudioProjects/CarsApplication/app/src/main/res/layout/activity_manufacturers.xml" value="0.2765625" />

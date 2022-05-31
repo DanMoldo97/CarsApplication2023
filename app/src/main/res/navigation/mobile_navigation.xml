@@ -16,4 +16,10 @@
         android:name="com.example.carsapplication.ui.manufacturers.ManufacturersActivity"
         android:label="@string/menu_manufacturers"
         tools:layout="@layout/activity_manufacturers" />
+
+    <activity
+        android:id="@+id/nav_car_capture"
+        android:name="com.example.carsapplication.ui.camera_capture.CarCapture"
+        android:label="@string/menu_capture_car"
+        tools:layout="@layout/activity_car_capture" />
 </navigation>

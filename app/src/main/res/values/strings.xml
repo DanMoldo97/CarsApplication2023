@@ -62,4 +62,6 @@
         Audi is an automobile manufacturer based in Ingolstadt, Germany and founded in 1909. Before being acquired by Volkswagen AG, Audi was part of Auto Union.
         Currently the company is praised for their premium luxury saloons and sports cars.
     </string>
+    <string name="take_photo">Take Photo</string>
+    <string name="menu_capture_car">Take a Photo</string>
 </resources>

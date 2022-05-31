@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CarsApplication">
         <activity
+            android:name=".ui.camera_capture.CarCapture"
+            android:exported="true" />
+        <activity
             android:name=".ui.manufacturers.DetailsActivity"
             android:exported="true" />
         <activity
