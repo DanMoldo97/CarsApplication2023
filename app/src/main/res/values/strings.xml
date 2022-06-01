@@ -73,4 +73,5 @@
     <string name="country">Country</string>
     <string name="manufacturer">Manufacturer</string>
     <string name="manufacturer_image_of_row">Manufacturer Image Of Row</string>
+    <string name="search">Search</string>
 </resources>
