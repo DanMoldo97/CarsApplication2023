@@ -18,8 +18,6 @@ import com.example.carsapplication.databinding.ActivityViewShareImageBinding
 import java.io.File
 import java.io.FileOutputStream
 import java.lang.Exception
-import java.net.URI
-import android.content.pm.ResolveInfo
 
 import android.content.pm.PackageManager
 
@@ -41,7 +39,7 @@ class ViewShareImage : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         super.onCreateOptionsMenu(menu)
-        var inflater = menuInflater
+        val inflater = menuInflater
         inflater.inflate(R.menu.share_menu, menu)
         return true
     }
@@ -54,8 +52,8 @@ class ViewShareImage : AppCompatActivity() {
     }
 
     private fun shareImg() {
-        var shareIntent = Intent(Intent.ACTION_SEND)
-        shareIntent.setType("image/png")
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.type = "image/png"
         shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Check out this cool car I have found ")
         val contentUriFromImage = getContentUriFromImage()
         shareIntent.putExtra(Intent.EXTRA_STREAM, contentUriFromImage)
@@ -74,18 +72,18 @@ class ViewShareImage : AppCompatActivity() {
         var bitmap : Bitmap? = null
         var contentUri : Uri? = null
         try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            bitmap = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
                 val source = ImageDecoder.createSource(contentResolver, imageUri)
-                bitmap = ImageDecoder.decodeBitmap(source)
+                ImageDecoder.decodeBitmap(source)
             } else {
-                bitmap = MediaStore.Images.Media.getBitmap(contentResolver, imageUri)
+                MediaStore.Images.Media.getBitmap(contentResolver, imageUri)
             }
         } catch (e : Exception) {
-            Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
+            showToast(e.message.toString())
         }
 
 
-        var imagesFolder : File = File(cacheDir, "images")
+        val imagesFolder = File(cacheDir, "images")
         try {
             imagesFolder.mkdirs()
             val file = File(imagesFolder, "shared_image.png")
@@ -95,8 +93,12 @@ class ViewShareImage : AppCompatActivity() {
             outputStream.close()
             contentUri  = FileProvider.getUriForFile(this, "com.example.carsapplication.fileprovider", file)
         } catch (e : Exception) {
-            Toast.makeText(this, e.message, Toast.LENGTH_SHORT).show()
+            showToast(e.message.toString())
         }
         return contentUri!!
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }
