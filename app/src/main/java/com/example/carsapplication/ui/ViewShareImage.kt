@@ -18,11 +18,7 @@ import com.example.carsapplication.databinding.ActivityViewShareImageBinding
 import java.io.File
 import java.io.FileOutputStream
 import java.lang.Exception
-
 import android.content.pm.PackageManager
-
-
-
 
 class ViewShareImage : AppCompatActivity() {
 
