@@ -23,15 +23,10 @@ import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.ExecutorService
 
-typealias LumaListener = (luma: Double) -> Unit
-
 class CarCapture : AppCompatActivity() {
     private lateinit var viewBinding: ActivityCarCaptureBinding
 
     private var imageCapture: ImageCapture? = null
-
-    /*private var videoCapture: VideoCapture<Recorder>? = null
-    private var recording: Recording? = null*/
 
     private lateinit var cameraExecutor: ExecutorService
 
@@ -71,7 +66,7 @@ class CarCapture : AppCompatActivity() {
 
         // Set up image capture listener, which is triggered after photo has
         // been taken
-        var intent  =  Intent(this, ViewShareImage::class.java)
+        val intent  =  Intent(this, ViewShareImage::class.java)
         imageCapture.takePicture(
             outputOptions,
             ContextCompat.getMainExecutor(this),
@@ -84,7 +79,7 @@ class CarCapture : AppCompatActivity() {
                     val msg = "Photo capture succeeded: ${output.savedUri}"
                     Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
                     Log.d(TAG, msg)
-                    intent.setData(output.savedUri)
+                    intent.data = output.savedUri
                     intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                     startActivity(intent)
                 }
