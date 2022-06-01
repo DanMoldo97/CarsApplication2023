@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.carsapplication.R
 import java.util.*
 
-class MyAdapter public constructor(): RecyclerView.Adapter<MyAdapter.MyViewHolder>(), Filterable {
+class MyAdapter(): RecyclerView.Adapter<MyAdapter.MyViewHolder>(), Filterable {
 
     var context: Context? = null
     var manufacturersList: MutableList<ManufacturerExample>? = null
@@ -36,7 +36,7 @@ class MyAdapter public constructor(): RecyclerView.Adapter<MyAdapter.MyViewHolde
         return MyViewHolder(view)
     }
 
-     override fun onBindViewHolder(holder: MyAdapter.MyViewHolder, @SuppressLint("RecyclerView") position: Int) {
+     override fun onBindViewHolder(holder: MyViewHolder, @SuppressLint("RecyclerView") position: Int) {
         holder.manufacturerName.text = manufacturersList!![position].title
         holder.country.text = manufacturersList!![position].country
         holder.manufacturerLogo.setImageResource(manufacturersList!![position].imageLogo)
@@ -67,7 +67,7 @@ class MyAdapter public constructor(): RecyclerView.Adapter<MyAdapter.MyViewHolde
         }
     }
 
-    override fun getFilter(): Filter? {
+    override fun getFilter(): Filter {
         return exampleFilter
     }
 
@@ -75,7 +75,7 @@ class MyAdapter public constructor(): RecyclerView.Adapter<MyAdapter.MyViewHolde
         @RequiresApi(api = Build.VERSION_CODES.N)
         override fun performFiltering(constraint: CharSequence): FilterResults {
             val filteredList: MutableList<ManufacturerExample> = ArrayList()
-            if (constraint != null && constraint.isNotEmpty()) {
+            if (constraint.isNotEmpty()) {
                 val filterPattern = constraint.toString().lowercase(Locale.getDefault()).trim { it <= ' ' }
                 manufacturerExampleListFull!!.stream().filter { el -> el.title.lowercase(Locale.getDefault()).startsWith(filterPattern) }
                     .forEach (filteredList::add)
@@ -87,6 +87,7 @@ class MyAdapter public constructor(): RecyclerView.Adapter<MyAdapter.MyViewHolde
             return filterResults
         }
 
+        @SuppressLint("NotifyDataSetChanged")
         override fun publishResults(charSequence: CharSequence, filterResults: FilterResults) {
             manufacturersList?.clear()
             manufacturersList?.addAll(filterResults?.values as Collection<ManufacturerExample>)
