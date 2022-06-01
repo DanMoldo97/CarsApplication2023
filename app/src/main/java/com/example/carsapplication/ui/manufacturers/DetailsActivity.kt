@@ -11,15 +11,15 @@ import com.example.carsapplication.R
 
 class DetailsActivity : AppCompatActivity() {
 
-    lateinit var mainImageView : ImageView;
-    lateinit var title : TextView;
-    lateinit var country : TextView;
-    lateinit var descriptionText : TextView;
+    private lateinit var mainImageView : ImageView
+    private lateinit var title : TextView
+    private lateinit var country : TextView
+    private lateinit var descriptionText : TextView
 
-    lateinit var titleString : String;
-    lateinit var countryString : String;
-    var imageLogo : Int = -1;
-    lateinit var descriptionMap : Map<String, String>
+    private lateinit var titleString : String
+    private lateinit var countryString : String
+    private var imageLogo : Int = -1
+    private lateinit var descriptionMap : Map<String, String>
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,9 +57,9 @@ class DetailsActivity : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.N)
     fun setData() {
-        title.setText(titleString)
-        country.setText(countryString)
+        title.text = titleString
+        country.text = countryString
         mainImageView.setImageResource(imageLogo)
-        descriptionText.setText(descriptionMap.getOrDefault(titleString, ""))
+        descriptionText.text = descriptionMap.getOrDefault(titleString, "")
     }
 }

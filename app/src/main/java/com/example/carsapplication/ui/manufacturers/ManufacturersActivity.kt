@@ -11,13 +11,13 @@ import com.example.carsapplication.R
 
 class ManufacturersActivity : AppCompatActivity() {
 
-    lateinit var recyclerView : RecyclerView;
-    lateinit var myAdapter : MyAdapter;
-    lateinit var s1 : Array<String>;
-    lateinit var s2 : Array<String>;
-    var images : IntArray = intArrayOf(R.drawable.fiat_logo, R.drawable.alfa_romeo_logo, R.drawable.mini_cooper_logo, R.drawable.bmw_logo, R.drawable.mercedes_logo);
+    private lateinit var recyclerView : RecyclerView
+    private lateinit var myAdapter : MyAdapter
+    private lateinit var s1 : Array<String>
+    private lateinit var s2 : Array<String>
+    private var images : IntArray = intArrayOf(R.drawable.fiat_logo, R.drawable.alfa_romeo_logo, R.drawable.mini_cooper_logo, R.drawable.bmw_logo, R.drawable.mercedes_logo)
 
-    private var manufacturerList : MutableList<ManufacturerExample> = ArrayList();
+    private var manufacturerList : MutableList<ManufacturerExample> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,12 +33,12 @@ class ManufacturersActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        var inflater = menuInflater
+        val inflater = menuInflater
         inflater.inflate(R.menu.search_manufacturer_menu, menu)
 
-        var searchItem = menu?.findItem(R.id.action_search)
-        var searchView = searchItem?.actionView as SearchView
-        searchView.setImeOptions(EditorInfo.IME_ACTION_DONE)
+        val searchItem = menu?.findItem(R.id.action_search)
+        val searchView = searchItem?.actionView as SearchView
+        searchView.imeOptions = EditorInfo.IME_ACTION_DONE
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
 
             override fun onQueryTextSubmit(p0: String?): Boolean {
@@ -50,13 +50,13 @@ class ManufacturersActivity : AppCompatActivity() {
                 return false
             }
         })
-        return true;
+        return true
     }
 
-    fun populateManufacturerList() {
-        var position = 0;
+    private fun populateManufacturerList() {
+        var position = 0
         while (position < s1.size) {
-            var manufacturer = ManufacturerExample()
+            val manufacturer = ManufacturerExample()
             manufacturer.title = s1[position]
             manufacturer.country = s2[position]
             manufacturer.imageLogo = images[position]
