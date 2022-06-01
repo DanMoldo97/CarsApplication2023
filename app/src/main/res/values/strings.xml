@@ -66,4 +66,11 @@
     <string name="menu_capture_car">Take a Photo</string>
     <string name="share">Share</string>
     <string name="dashboardText">Dashboard</string>
+    <string name="manufacturer_logo">Manufacturer Logo</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="image_displayed_after_photo">Image Displayed after Photo</string>
+    <string name="country">Country</string>
+    <string name="manufacturer">Manufacturer</string>
+    <string name="manufacturer_image_of_row">Manufacturer Image Of Row</string>
 </resources>
